@@ -14,20 +14,39 @@ import com.example.daloft.ui.theme.DaloftTheme
 import soup.neumorphism.NeumorphCardView
 
 import android.graphics.drawable.GradientDrawable
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.daloft.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding=ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.menubutton?.setOnClickListener {
+            if (binding.buttonCard?.visibility == View.VISIBLE) {
+                binding.buttonCard?.visibility = View.GONE
+                binding.menubutton!!.setImageResource(R.drawable.menu_on)
 
-        // Get references to the NeumorphCardViews
-        val topCenterCard = findViewById<NeumorphCardView>(R.id.top_center_card)
-        val bottomCenterCard = findViewById<NeumorphCardView>(R.id.bottom_center_card)
+            } else {
+                binding.buttonCard!!.visibility = View.VISIBLE
+                binding.menubutton!!.setImageResource(R.drawable.menu_off)
+            }
+        }
 
-        // Set the trapezoid shape as background
-        topCenterCard.background = createTrapezoidShape()
-        bottomCenterCard.background = createTrapezoidShape()
+        binding.menubutton2?.setOnClickListener {
+            if (binding.buttonCard2?.visibility == View.VISIBLE) {
+                binding.buttonCard2?.visibility = View.GONE
+                binding.menubutton2!!.setImageResource(R.drawable.menu_on)
+
+            } else {
+                binding.buttonCard2!!.visibility = View.VISIBLE
+                binding.menubutton2!!.setImageResource(R.drawable.menu_off)
+            }
+        }
+
+
     }
 
     private fun createTrapezoidShape(): GradientDrawable {

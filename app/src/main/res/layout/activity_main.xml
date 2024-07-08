@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/grey">
 
     <!-- Include activity_maps.xml as the background -->
-
 
 
     <!-- Your existing layout content -->
@@ -17,58 +16,87 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <Button
-            android:id="@+id/startWp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/buttonCard2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Start"
-            app:cornerRadius="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/textView9"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.95"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.163" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView6"
+            app:layout_constraintVertical_bias="0.38">
 
-        <Button
-            android:id="@+id/missionStart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#41F40303"
-            android:text="MS"
-            app:cornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/startWp"
-            app:layout_constraintStart_toStartOf="@+id/startWp"
-            app:layout_constraintTop_toBottomOf="@+id/startWp" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_card_background"
+                android:padding="10dp">
 
-        <Button
-            android:id="@+id/autopilot"
-            android:layout_width="88dp"
-            android:layout_height="53dp"
-            android:layout_marginTop="4dp"
-            android:text="AutoPilot"
-            app:cornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/missionStart"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/missionStart"
-            app:layout_constraintTop_toBottomOf="@+id/missionStart" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/startWp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonsbk"
+                    android:backgroundTint="#9863509e"
+                    android:text="Start"
+                    android:textColor="@color/white"
+                    app:cornerRadius="10dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/missionStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/buttonsbk"
+                    android:backgroundTint="#98a64d4b"
+                    android:text="MS"
+                    android:textColor="@color/white"
+                    app:cornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/startWp"
+                    app:layout_constraintStart_toStartOf="@+id/startWp"
+                    app:layout_constraintTop_toBottomOf="@+id/startWp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+
+                    android:id="@+id/autopilot"
+                    android:layout_width="88dp"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/buttonsbk"
+                    android:backgroundTint="#9863509e"
+                    android:text="AutoPilot"
+                    android:textColor="@color/white"
+                    app:cornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/missionStart"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/missionStart"
+                    app:layout_constraintTop_toBottomOf="@+id/missionStart" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/imageView6"
             android:layout_width="725dp"
+
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="4dp"
+            android:backgroundTint="@android:color/transparent"
             app:cardCornerRadius="110dp"
-            app:cardBackgroundColor="@color/whiteshade"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-           <!-- <ImageView
+            <!-- <ImageView
                 android:id="@+id/trapezoidImageView"
                 android:layout_width="110dp"
                 android:layout_height="87dp"
@@ -85,6 +113,12 @@
                 android:layout_centerHorizontal="true">
 
             </FrameLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bars_background" />
         </androidx.cardview.widget.CardView>
 
 
@@ -117,8 +151,8 @@
             android:id="@+id/imageView4"
             android:layout_width="24dp"
             android:layout_height="20dp"
-            android:src="@drawable/satellites"
             android:elevation="10dp"
+            android:src="@drawable/satellites"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
             app:layout_constraintHorizontal_bias="0.724"
@@ -126,7 +160,7 @@
             app:layout_constraintTop_toTopOf="@+id/imageView6"
             app:layout_constraintVertical_bias="0.5" />
 
-      <!--  <ImageView
+        <!--  <ImageView
             android:id="@+id/imageView8"
             android:layout_width="24dp"
             android:layout_height="20dp"
@@ -140,22 +174,24 @@
             app:layout_constraintVertical_bias="0.5" />-->
 
 
-
-
-
         <androidx.cardview.widget.CardView
             android:id="@+id/imgBottomBar"
             android:layout_width="725dp"
             android:layout_height="50dp"
             android:layout_marginBottom="4dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:rotationX="180"
             app:cardCornerRadius="110dp"
             app:cardElevation="0dp"
-            android:rotationX="180"
-            app:cardBackgroundColor="@color/whiteshade"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bars_background" />
         </androidx.cardview.widget.CardView>
 
         <ImageView
@@ -164,23 +200,20 @@
             android:layout_height="59dp"
             android:layout_marginBottom="-50dp"
             android:elevation="80dp"
+            android:rotation="180"
             android:scaleType="fitXY"
             android:src="@drawable/trapezoidpng"
-            android:rotation="180"
             app:layout_constraintBottom_toTopOf="@id/imgBottomBar"
             app:layout_constraintEnd_toEndOf="@id/imgBottomBar"
-            app:layout_constraintStart_toStartOf="@id/imgBottomBar"
-             />
-
-
+            app:layout_constraintStart_toStartOf="@id/imgBottomBar" />
 
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="22dp"
             android:layout_height="20dp"
-            android:src="@drawable/measuring_jar"
             android:elevation="10dp"
+            android:src="@drawable/measuring_jar"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
             app:layout_constraintHorizontal_bias="0.189"
@@ -190,20 +223,45 @@
 
         <ImageView
             android:id="@+id/imageView5"
+            android:src="@drawable/logo_2"
             android:layout_width="268dp"
             android:layout_height="160dp"
-            android:src="@drawable/logo_2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/menubutton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_marginLeft="6dp"
+            android:src="@drawable/menu_off"
+            app:layout_constraintBottom_toTopOf="@+id/imgBottomBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.23000002" />
+
+        <ImageView
+            android:layout_marginLeft="6dp"
+            android:id="@+id/menubutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/menu_off"
+            app:layout_constraintBottom_toTopOf="@+id/imgBottomBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.100000024" />
 
         <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="148dp"
-            android:layout_height="167dp"
+
+            android:id="@+id/buttonCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:background="@drawable/button_set_backgound"
+            android:background="@drawable/button_card_background"
+
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp"
@@ -211,13 +269,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bList"
                 android:layout_width="126dp"
                 android:layout_height="48dp"
+                android:background="@drawable/buttonsbk"
                 android:backgroundTint="#D5657369"
                 android:text="BT Devices"
-
+                android:textColor="@color/white"
                 android:textColorLink="#673AB7"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -225,25 +284,31 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="275dp" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bConnect"
                 android:layout_width="126dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonsbk"
                 android:backgroundTint="#45F44336"
                 android:elevation="10dp"
                 android:text="Connect"
+                android:textColor="@color/white"
                 app:cornerRadius="10dp"
                 app:layout_constraintBottom_toTopOf="@+id/bList"
                 app:layout_constraintEnd_toEndOf="@+id/bList"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/bList" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/startButton"
                 android:layout_width="126dp"
                 android:layout_height="48dp"
-                android:backgroundTint="@color/btnColor"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonsbk"
+                android:backgroundTint="#60aebbae"
                 android:text="Mag OS"
+                android:textColor="@color/white"
                 app:cornerRadius="10dp"
                 app:layout_constraintBottom_toTopOf="@+id/bacc"
                 app:layout_constraintEnd_toEndOf="@+id/bacc"
@@ -282,9 +347,9 @@
             android:id="@+id/textView6"
             android:layout_width="17dp"
             android:layout_height="17dp"
-            android:text="m"
-            android:fontFamily="@font/poppins_light_300"
             android:elevation="10dp"
+            android:fontFamily="@font/poppins_light_300"
+            android:text="m"
             android:textAlignment="textStart"
             android:textColor="@color/lightwhite"
             android:textSize="12sp"
@@ -300,10 +365,10 @@
             android:layout_width="47dp"
             android:layout_height="25dp"
             android:elevation="10dp"
+            android:fontFamily="@font/poppins_medium_500"
             android:gravity="center"
             android:text="13.2"
             android:textAlignment="center"
-            android:fontFamily="@font/poppins_medium_500"
             android:textColor="@color/white"
             android:textSize="23sp"
             android:textStyle="bold"
@@ -339,8 +404,8 @@
             android:layout_height="25dp"
             android:layout_below="@id/tankCapacity"
             android:elevation="10dp"
-            android:text="13.2"
             android:fontFamily="@font/poppins_medium_500"
+            android:text="13.2"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="23sp"
@@ -358,8 +423,8 @@
             android:layout_height="25dp"
             android:layout_below="@id/altitude"
             android:elevation="10dp"
-            android:text="13.2"
             android:fontFamily="@font/poppins_medium_500"
+            android:text="13.2"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="23sp"
@@ -377,8 +442,8 @@
             android:layout_height="25dp"
             android:layout_below="@id/velocity"
             android:elevation="10dp"
-            android:text="13.2"
             android:fontFamily="@font/poppins_medium_500"
+            android:text="13.2"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="23sp"
@@ -395,8 +460,8 @@
             android:layout_width="47dp"
             android:layout_height="25dp"
             android:elevation="10dp"
-            android:text="13.2"
             android:fontFamily="@font/poppins_medium_500"
+            android:text="13.2"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="23sp"
@@ -404,18 +469,18 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
             app:layout_constraintHorizontal_bias="0.085"
-            app:layout_constraintVertical_bias="0.4"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
-            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+            app:layout_constraintTop_toTopOf="@+id/imageView6"
+            app:layout_constraintVertical_bias="0.4" />
 
         <TextView
             android:id="@+id/tankCapacity"
             android:layout_width="42dp"
             android:layout_height="25dp"
             android:layout_below="@id/battery"
-            android:text="13.2"
-            android:fontFamily="@font/poppins_medium_500"
             android:elevation="10dp"
+            android:fontFamily="@font/poppins_medium_500"
+            android:text="13.2"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="23sp"
@@ -423,17 +488,17 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
             app:layout_constraintHorizontal_bias="0.23"
-            app:layout_constraintVertical_bias="0.4"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
-            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+            app:layout_constraintTop_toTopOf="@+id/imageView6"
+            app:layout_constraintVertical_bias="0.4" />
 
         <TextView
             android:id="@+id/sat"
             android:layout_width="42dp"
             android:layout_height="25dp"
             android:elevation="10dp"
-            android:text="13.2"
             android:fontFamily="@font/poppins_medium_500"
+            android:text="13.2"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="23sp"
@@ -468,8 +533,8 @@
             android:layout_width="36dp"
             android:layout_height="21dp"
             android:elevation="10dp"
-            android:text="FLOW"
             android:fontFamily="@font/poppins_light_300"
+            android:text="FLOW"
             android:textAlignment="center"
             android:textColor="@color/mediumwhite"
             android:textSize="12sp"
@@ -522,8 +587,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="10dp"
-            android:text="ALT"
             android:fontFamily="@font/poppins_light_300"
+            android:text="ALT"
             android:textAlignment="center"
             android:textColor="@color/mediumwhite"
             android:textSize="12sp"
@@ -540,8 +605,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="10dp"
-            android:text="SPEED"
             android:fontFamily="@font/poppins_light_300"
+            android:text="SPEED"
             android:textColor="@color/mediumwhite"
             android:textSize="12sp"
             android:textStyle="bold"
@@ -557,8 +622,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="10dp"
-            android:text="DIST"
             android:fontFamily="@font/poppins_light_300"
+            android:text="DIST"
             android:textColor="@color/mediumwhite"
             android:textSize="12sp"
             android:textStyle="bold"
@@ -573,9 +638,9 @@
             android:id="@+id/mode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MANUAL"
-            android:fontFamily="@font/stencil"
             android:elevation="80dp"
+            android:fontFamily="@font/stencil"
+            android:text="MANUAL"
             android:textColor="#050505"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"
@@ -588,8 +653,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="80dp"
-            android:text="DISARM"
             android:fontFamily="@font/stencil"
+            android:text="DISARM"
             android:textColor="#000000"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
@@ -602,42 +667,42 @@
             android:layout_width="17dp"
             android:layout_height="17dp"
             android:elevation="10dp"
-            android:text="L"
             android:fontFamily="@font/poppins_light_300"
+            android:text="L"
             android:textAlignment="center"
             android:textColor="@color/lightwhite"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
             app:layout_constraintHorizontal_bias="0.279"
-            app:layout_constraintVertical_bias="0.583"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
-            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+            app:layout_constraintTop_toTopOf="@+id/imageView6"
+            app:layout_constraintVertical_bias="0.583" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="17dp"
             android:layout_height="17dp"
-            android:text="V"
-            android:fontFamily="@font/poppins_light_300"
             android:elevation="10dp"
+            android:fontFamily="@font/poppins_light_300"
+            android:text="V"
             android:textAlignment="center"
             android:textColor="@color/lightwhite"
             android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
             app:layout_constraintHorizontal_bias="0.145"
-            app:layout_constraintVertical_bias="0.583"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
-            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+            app:layout_constraintTop_toTopOf="@+id/imageView6"
+            app:layout_constraintVertical_bias="0.583" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="29dp"
             android:layout_height="17dp"
-            android:text="m3/s"
-            android:fontFamily="@font/poppins_light_300"
             android:elevation="10dp"
+            android:fontFamily="@font/poppins_light_300"
+            android:text="m3/s"
             android:textAlignment="center"
             android:textColor="@color/lightwhite"
             android:textSize="11sp"
@@ -668,9 +733,9 @@
             android:id="@+id/textView7"
             android:layout_width="25dp"
             android:layout_height="14dp"
-            android:text="m/s"
-            android:fontFamily="@font/poppins_medium_500"
             android:elevation="10dp"
+            android:fontFamily="@font/poppins_medium_500"
+            android:text="m/s"
             android:textAlignment="center"
             android:textColor="@color/lightwhite"
             android:textSize="12sp"
@@ -685,9 +750,9 @@
             android:id="@+id/textView9"
             android:layout_width="17dp"
             android:layout_height="17dp"
-            android:text="m"
-            android:fontFamily="@font/poppins_light_300"
             android:elevation="10dp"
+            android:fontFamily="@font/poppins_light_300"
+            android:text="m"
             android:textAlignment="center"
             android:textColor="@color/lightwhite"
             android:textSize="12sp"
@@ -784,8 +849,8 @@
             android:id="@+id/circle"
             android:layout_width="54dp"
             android:layout_height="54dp"
-            android:visibility="invisible"
             android:background="@drawable/circle"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="@+id/circleanmi"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/circleanmi"
