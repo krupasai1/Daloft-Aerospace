@@ -21,13 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Get references to the NeumorphCardViews
-        val topCenterCard = findViewById<NeumorphCardView>(R.id.top_center_card)
-        val bottomCenterCard = findViewById<NeumorphCardView>(R.id.bottom_center_card)
 
-        // Set the trapezoid shape as background
-        topCenterCard.background = createTrapezoidShape()
-        bottomCenterCard.background = createTrapezoidShape()
     }
 
     private fun createTrapezoidShape(): GradientDrawable {
