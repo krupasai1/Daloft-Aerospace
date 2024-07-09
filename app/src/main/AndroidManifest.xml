@@ -12,14 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Daloft"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Daloft">
+            android:theme="@style/Theme.Daloft"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -19,19 +19,19 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/buttonCard2"
             android:layout_width="wrap_content"
-android:outlineSpotShadowColor="@android:color/transparent"
             android:layout_height="wrap_content"
-            android:outlineAmbientShadowColor="@android:color/transparent"
             android:layout_marginRight="5dp"
+            android:visibility="visible"
             android:backgroundTint="@android:color/transparent"
             app:layout_constraintBottom_toTopOf="@+id/textView9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView6"
-            app:layout_constraintVertical_bias="0.43">
+            app:layout_constraintVertical_bias="0.1"
+            android:layout_marginEnd="24dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="103dp"
+                android:layout_height="match_parent"
                 android:background="@drawable/button_card_background"
                 android:padding="10dp">
 
@@ -44,7 +44,6 @@ android:outlineSpotShadowColor="@android:color/transparent"
                     android:text="Start"
                     android:textColor="@color/white"
                     app:cornerRadius="10dp"
-
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -84,8 +83,7 @@ android:outlineSpotShadowColor="@android:color/transparent"
 
         <androidx.cardview.widget.CardView
             android:id="@+id/imageView6"
-            android:layout_width="725dp"
-
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
@@ -119,7 +117,7 @@ android:outlineSpotShadowColor="@android:color/transparent"
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/bars_background" />
+                android:background="@drawable/gradient_background" />
         </androidx.cardview.widget.CardView>
 
 
@@ -177,10 +175,9 @@ android:outlineSpotShadowColor="@android:color/transparent"
 
         <androidx.cardview.widget.CardView
             android:id="@+id/imgBottomBar"
-            android:layout_width="725dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="4dp"
-            android:background="@android:color/transparent"
             android:backgroundTint="@android:color/transparent"
             android:rotationX="180"
             app:cardCornerRadius="110dp"
@@ -192,7 +189,7 @@ android:outlineSpotShadowColor="@android:color/transparent"
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/bars_background" />
+                android:background="@drawable/gradient_background" />
         </androidx.cardview.widget.CardView>
 
         <ImageView
@@ -233,43 +230,44 @@ android:outlineSpotShadowColor="@android:color/transparent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:layout_marginLeft="6dp"
+            android:id="@+id/menubutton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:clickable="true"
+            android:src="@drawable/ic_right_arrow"
+            app:layout_constraintBottom_toTopOf="@+id/imgBottomBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.47" />
+
+        <ImageView
             android:id="@+id/menubutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:clickable="true"
             android:src="@drawable/menu_off"
             app:layout_constraintBottom_toTopOf="@+id/imgBottomBar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.100000024" />
-
-        <ImageView
-            android:id="@+id/menubutton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:layout_marginLeft="6dp"
-            android:src="@drawable/menu_off"
-            app:layout_constraintBottom_toTopOf="@+id/imgBottomBar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.23000002" />
+            app:layout_constraintVertical_bias="0.476" />
 
         <LinearLayout
 
             android:id="@+id/buttonCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="28dp"
             android:background="@drawable/button_card_background"
-
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.46">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bList"
@@ -357,23 +355,22 @@ android:outlineSpotShadowColor="@android:color/transparent"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"
             app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"
-            app:layout_constraintHorizontal_bias="0.353"
+            app:layout_constraintHorizontal_bias="0.36"
             app:layout_constraintStart_toStartOf="@+id/imgBottomBar"
             app:layout_constraintTop_toTopOf="@+id/imgBottomBar"
             app:layout_constraintVertical_bias="0.66" />
 
         <TextView
             android:id="@+id/altitude"
-            android:layout_width="47dp"
-            android:layout_height="25dp"
+            android:layout_width="56dp"
+            android:layout_height="27dp"
             android:elevation="10dp"
-            android:fontFamily="@font/poppins_medium_500"
+            android:fontFamily="@font/sports_world"
             android:gravity="center"
             android:text="13.2"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="23sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"
             app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"
             app:layout_constraintHorizontal_bias="0.299"
@@ -402,16 +399,15 @@ android:outlineSpotShadowColor="@android:color/transparent"
 
         <TextView
             android:id="@+id/pitch"
-            android:layout_width="47dp"
-            android:layout_height="25dp"
+            android:layout_width="56dp"
+            android:layout_height="27dp"
             android:layout_below="@id/tankCapacity"
             android:elevation="10dp"
-            android:fontFamily="@font/poppins_medium_500"
+            android:fontFamily="@font/sports_world"
             android:text="13.2"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="23sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"
             app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"
             app:layout_constraintHorizontal_bias="0.089"
@@ -421,96 +417,91 @@ android:outlineSpotShadowColor="@android:color/transparent"
 
         <TextView
             android:id="@+id/velocity"
-            android:layout_width="47dp"
-            android:layout_height="25dp"
+            android:layout_width="56dp"
+            android:layout_height="27dp"
             android:layout_below="@id/altitude"
             android:elevation="10dp"
-            android:fontFamily="@font/poppins_medium_500"
+            android:fontFamily="@font/sports_world"
             android:text="13.2"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="23sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"
             app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"
-            app:layout_constraintHorizontal_bias="0.722"
+            app:layout_constraintHorizontal_bias="0.732"
             app:layout_constraintStart_toStartOf="@+id/imgBottomBar"
             app:layout_constraintTop_toTopOf="@+id/imgBottomBar"
             app:layout_constraintVertical_bias="0.4" />
 
         <TextView
             android:id="@+id/distance"
-            android:layout_width="47dp"
-            android:layout_height="25dp"
+            android:layout_width="56dp"
+            android:layout_height="27dp"
             android:layout_below="@id/velocity"
             android:elevation="10dp"
-            android:fontFamily="@font/poppins_medium_500"
+            android:fontFamily="@font/sports_world"
             android:text="13.2"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="23sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"
             app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"
-            app:layout_constraintHorizontal_bias="0.932"
+            app:layout_constraintHorizontal_bias="0.936"
             app:layout_constraintStart_toStartOf="@+id/imgBottomBar"
             app:layout_constraintTop_toTopOf="@+id/imgBottomBar"
             app:layout_constraintVertical_bias="0.4" />
 
         <TextView
             android:id="@+id/battery"
-            android:layout_width="47dp"
-            android:layout_height="25dp"
+            android:layout_width="56dp"
+            android:layout_height="27dp"
             android:elevation="10dp"
-            android:fontFamily="@font/poppins_medium_500"
+            android:fontFamily="@font/sports_world"
             android:text="13.2"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="23sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintHorizontal_bias="0.08"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toTopOf="@+id/imageView6"
-            app:layout_constraintVertical_bias="0.4" />
+            app:layout_constraintVertical_bias="0.3" />
 
         <TextView
             android:id="@+id/tankCapacity"
-            android:layout_width="42dp"
-            android:layout_height="25dp"
+            android:layout_width="56dp"
+            android:layout_height="27dp"
             android:layout_below="@id/battery"
             android:elevation="10dp"
-            android:fontFamily="@font/poppins_medium_500"
+            android:fontFamily="@font/sports_world"
             android:text="13.2"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="23sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
             app:layout_constraintHorizontal_bias="0.23"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toTopOf="@+id/imageView6"
-            app:layout_constraintVertical_bias="0.4" />
+            app:layout_constraintVertical_bias="0.3" />
 
         <TextView
             android:id="@+id/sat"
-            android:layout_width="42dp"
-            android:layout_height="25dp"
+            android:layout_width="56dp"
+            android:layout_height="27dp"
             android:elevation="10dp"
-            android:fontFamily="@font/poppins_medium_500"
+            android:fontFamily="@font/sports_world"
             android:text="13.2"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="23sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintHorizontal_bias="0.782"
+            app:layout_constraintHorizontal_bias="0.794"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toTopOf="@+id/imageView6"
-            app:layout_constraintVertical_bias="0.4" />
+            app:layout_constraintVertical_bias="0.3" />
 
         <!--<TextView
             android:id="@+id/transmitterSignal"
@@ -543,10 +534,10 @@ android:outlineSpotShadowColor="@android:color/transparent"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"
             app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"
-            app:layout_constraintHorizontal_bias="0.036"
+            app:layout_constraintHorizontal_bias="0.035"
             app:layout_constraintStart_toStartOf="@+id/imgBottomBar"
             app:layout_constraintTop_toTopOf="@+id/imgBottomBar"
-            app:layout_constraintVertical_bias="0.7" />
+            app:layout_constraintVertical_bias="0.752" />
 
         <!--<TextView
             android:id="@+id/timer"
@@ -597,10 +588,10 @@ android:outlineSpotShadowColor="@android:color/transparent"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"
             app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"
-            app:layout_constraintHorizontal_bias="0.259"
+            app:layout_constraintHorizontal_bias="0.256"
             app:layout_constraintStart_toStartOf="@+id/imgBottomBar"
             app:layout_constraintTop_toTopOf="@+id/imgBottomBar"
-            app:layout_constraintVertical_bias="0.7" />
+            app:layout_constraintVertical_bias="0.752" />
 
         <TextView
             android:id="@+id/textView12"
@@ -617,7 +608,7 @@ android:outlineSpotShadowColor="@android:color/transparent"
             app:layout_constraintHorizontal_bias="0.659"
             app:layout_constraintStart_toStartOf="@+id/imgBottomBar"
             app:layout_constraintTop_toTopOf="@+id/imgBottomBar"
-            app:layout_constraintVertical_bias="0.666" />
+            app:layout_constraintVertical_bias="0.752" />
 
         <TextView
             android:id="@+id/textView13"
@@ -631,10 +622,10 @@ android:outlineSpotShadowColor="@android:color/transparent"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"
             app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"
-            app:layout_constraintHorizontal_bias="0.868"
+            app:layout_constraintHorizontal_bias="0.86"
             app:layout_constraintStart_toStartOf="@+id/imgBottomBar"
             app:layout_constraintTop_toTopOf="@+id/imgBottomBar"
-            app:layout_constraintVertical_bias="0.666" />
+            app:layout_constraintVertical_bias="0.725" />
 
         <TextView
             android:id="@+id/mode"
@@ -648,7 +639,8 @@ android:outlineSpotShadowColor="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"
             app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"
             app:layout_constraintStart_toStartOf="@+id/imgBottomBar"
-            app:layout_constraintTop_toTopOf="@+id/imgBottomBar" />
+            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"
+            app:layout_constraintVertical_bias="0.43"/>
 
         <TextView
             android:id="@+id/start"
@@ -676,7 +668,7 @@ android:outlineSpotShadowColor="@android:color/transparent"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintHorizontal_bias="0.279"
+            app:layout_constraintHorizontal_bias="0.287"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toTopOf="@+id/imageView6"
             app:layout_constraintVertical_bias="0.583" />
@@ -693,7 +685,7 @@ android:outlineSpotShadowColor="@android:color/transparent"
             android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintHorizontal_bias="0.147"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toTopOf="@+id/imageView6"
             app:layout_constraintVertical_bias="0.583" />
@@ -710,7 +702,7 @@ android:outlineSpotShadowColor="@android:color/transparent"
             android:textSize="11sp"
             app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"
             app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"
-            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintHorizontal_bias="0.164"
             app:layout_constraintStart_toStartOf="@+id/imgBottomBar"
             app:layout_constraintTop_toTopOf="@+id/imgBottomBar"
             app:layout_constraintVertical_bias="0.69" />
@@ -734,7 +726,7 @@ android:outlineSpotShadowColor="@android:color/transparent"
         <TextView
             android:id="@+id/textView7"
             android:layout_width="25dp"
-            android:layout_height="14dp"
+            android:layout_height="17dp"
             android:elevation="10dp"
             android:fontFamily="@font/poppins_medium_500"
             android:text="m/s"
@@ -743,10 +735,10 @@ android:outlineSpotShadowColor="@android:color/transparent"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"
             app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"
-            app:layout_constraintHorizontal_bias="0.768"
+            app:layout_constraintHorizontal_bias="0.779"
             app:layout_constraintStart_toStartOf="@+id/imgBottomBar"
             app:layout_constraintTop_toTopOf="@+id/imgBottomBar"
-            app:layout_constraintVertical_bias="0.583" />
+            app:layout_constraintVertical_bias="0.69" />
 
         <TextView
             android:id="@+id/textView9"
@@ -763,7 +755,7 @@ android:outlineSpotShadowColor="@android:color/transparent"
             app:layout_constraintHorizontal_bias="0.96"
             app:layout_constraintStart_toStartOf="@+id/imgBottomBar"
             app:layout_constraintTop_toTopOf="@+id/imgBottomBar"
-            app:layout_constraintVertical_bias="0.596" />
+            app:layout_constraintVertical_bias="0.69" />
 
         <!--<TextView
             android:id="@+id/yaw"
@@ -878,778 +870,3 @@ android:outlineSpotShadowColor="@android:color/transparent"
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>
-
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    android:background="@color/grey">-->
-
-<!--    &lt;!&ndash; Include activity_maps.xml as the background &ndash;&gt;-->
-
-
-
-<!--    &lt;!&ndash; Your existing layout content &ndash;&gt;-->
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-
-
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
-
-
-<!--        <Button-->
-<!--            android:id="@+id/startWp"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Start"-->
-<!--            app:cornerRadius="10dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.95"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.163" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/missionStart"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:backgroundTint="#41F40303"-->
-<!--            android:text="MS"-->
-<!--            app:cornerRadius="10dp"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/startWp"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/startWp"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/startWp" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/autopilot"-->
-<!--            android:layout_width="88dp"-->
-<!--            android:layout_height="53dp"-->
-<!--            android:layout_marginTop="4dp"-->
-<!--            android:text="AutoPilot"-->
-<!--            app:cornerRadius="10dp"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/missionStart"-->
-<!--            app:layout_constraintHorizontal_bias="0.0"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/missionStart"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/missionStart" />-->
-
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:id="@+id/imageView6"-->
-<!--            android:layout_width="708dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_alignParentBottom="true"-->
-<!--            android:layout_centerHorizontal="true"-->
-<!--            app:cardBackgroundColor="@color/white"-->
-<!--            app:cardCornerRadius="110dp"-->
-<!--            app:cardElevation="0dp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent">-->
-
-<!--        </androidx.cardview.widget.CardView>-->
-
-<!--        <FrameLayout-->
-<!--            android:id="@+id/frameLayout"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_above="@id/imageView6"-->
-<!--            android:layout_centerHorizontal="true"-->
-<!--            android:layout_marginBottom="297dp"-->
-<!--            app:layout_constraintBottom_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent">-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/trapezoidImageView"-->
-<!--                android:layout_width="110dp"-->
-<!--                android:layout_height="90dp"-->
-<!--                android:layout_gravity="center_horizontal|bottom"-->
-<!--                android:layout_marginBottom="-30dp"-->
-<!--                android:outlineAmbientShadowColor="@color/black"-->
-<!--                android:rotation="0"-->
-<!--                android:scaleType="fitXY"-->
-<!--                android:src="@drawable/trapezoidpng" />-->
-
-<!--        </FrameLayout>-->
-
-
-<!--        <ImageView-->
-<!--            android:id="@+id/imageView"-->
-<!--            android:layout_width="25dp"-->
-<!--            android:layout_height="22dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:src="@drawable/battery_icon"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--            app:layout_constraintHorizontal_bias="0.051"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imageView6"-->
-<!--            app:layout_constraintVertical_bias="0.409" />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/imageView4"-->
-<!--            android:layout_width="28dp"-->
-<!--            android:layout_height="25dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:src="@drawable/satellites"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--            app:layout_constraintHorizontal_bias="0.724"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imageView6"-->
-<!--            app:layout_constraintVertical_bias="0.368" />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/imageView8"-->
-<!--            android:layout_width="25dp"-->
-<!--            android:layout_height="28dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:src="@drawable/trans_1"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--            app:layout_constraintHorizontal_bias="0.882"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imageView6"-->
-<!--            app:layout_constraintVertical_bias="0.25" />-->
-
-
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:id="@+id/imgBottomBar"-->
-<!--            android:layout_width="708dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_marginBottom="4dp"-->
-<!--            android:rotationX="180"-->
-<!--            app:cardBackgroundColor="@color/whiteshade"-->
-<!--            app:cardCornerRadius="110dp"-->
-<!--            app:cardElevation="6dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/frameLayout">-->
-
-<!--            &lt;!&ndash; Content inside the CardView &ndash;&gt;-->
-<!--            &lt;!&ndash; You can add any views or leave it empty &ndash;&gt;-->
-
-<!--        </androidx.cardview.widget.CardView>-->
-
-
-<!--        <ImageView-->
-<!--            android:id="@+id/imageView3"-->
-<!--            android:layout_width="22dp"-->
-<!--            android:layout_height="20dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:src="@drawable/measuring_jar"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--            app:layout_constraintHorizontal_bias="0.189"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imageView6"-->
-<!--            app:layout_constraintVertical_bias="0.458" />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/imageView5"-->
-<!--            android:layout_width="268dp"-->
-<!--            android:layout_height="160dp"-->
-<!--            android:src="@drawable/logo_2"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--        <LinearLayout-->
-<!--            android:id="@+id/buttonCard"-->
-<!--            android:layout_width="148dp"-->
-<!--            android:layout_height="167dp"-->
-<!--            android:layout_marginStart="16dp"-->
-<!--            android:background="@drawable/button_set_backgound"-->
-<!--            android:gravity="center"-->
-<!--            android:orientation="vertical"-->
-<!--            android:padding="10dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent">-->
-
-<!--            <Button-->
-<!--                android:id="@+id/bList"-->
-<!--                android:layout_width="126dp"-->
-<!--                android:layout_height="48dp"-->
-<!--                android:backgroundTint="#D5657369"-->
-<!--                android:text="BT Devices"-->
-
-<!--                android:textColorLink="#673AB7"-->
-<!--                app:cornerRadius="10dp"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintHorizontal_bias="0.955"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                tools:layout_editor_absoluteY="275dp" />-->
-
-<!--            <Button-->
-<!--                android:id="@+id/bConnect"-->
-<!--                android:layout_width="126dp"-->
-<!--                android:layout_height="48dp"-->
-<!--                android:backgroundTint="#45F44336"-->
-<!--                android:elevation="10dp"-->
-<!--                android:text="Connect"-->
-<!--                app:cornerRadius="10dp"-->
-<!--                app:layout_constraintBottom_toTopOf="@+id/bList"-->
-<!--                app:layout_constraintEnd_toEndOf="@+id/bList"-->
-<!--                app:layout_constraintHorizontal_bias="0.0"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/bList" />-->
-
-<!--            <Button-->
-<!--                android:id="@+id/startButton"-->
-<!--                android:layout_width="126dp"-->
-<!--                android:layout_height="48dp"-->
-<!--                android:backgroundTint="@color/btnColor"-->
-<!--                android:text="Mag OS"-->
-<!--                app:cornerRadius="10dp"-->
-<!--                app:layout_constraintBottom_toTopOf="@+id/bacc"-->
-<!--                app:layout_constraintEnd_toEndOf="@+id/bacc"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/bacc" />-->
-
-
-<!--        </LinearLayout>-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/list"-->
-<!--            android:layout_width="164dp"-->
-<!--            android:layout_height="196dp"-->
-<!--            android:layout_marginBottom="108dp"-->
-<!--            android:visibility="visible"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.643"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            tools:visibility="visible" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/rm"-->
-<!--            android:layout_width="360dp"-->
-<!--            android:layout_height="28dp"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#E8281A"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent" />-->
-
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView6"-->
-<!--            android:layout_width="17dp"-->
-<!--            android:layout_height="17dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="m"-->
-<!--            android:textAlignment="textStart"-->
-<!--            android:textColor="#070606"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.406"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.608" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/altitude"-->
-<!--            android:layout_width="34dp"-->
-<!--            android:layout_height="16dp"-->
-<!--            android:layout_below="@id/roll"-->
-<!--            android:elevation="10dp"-->
-<!--            android:gravity="center"-->
-<!--            android:text="N/A"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#0E0A0A"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.369"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.6" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/roll"-->
-<!--            android:layout_width="35dp"-->
-<!--            android:layout_height="17dp"-->
-<!--            android:layout_below="@id/pitch"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="N/A"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#0B0808"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.214"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.608" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/pitch"-->
-<!--            android:layout_width="31dp"-->
-<!--            android:layout_height="17dp"-->
-<!--            android:layout_below="@id/tankCapacity"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="N/A"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#040303"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.067"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.608" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/velocity"-->
-<!--            android:layout_width="34dp"-->
-<!--            android:layout_height="17dp"-->
-<!--            android:layout_below="@id/altitude"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="N/A"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#000000"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.699"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.608" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/distance"-->
-<!--            android:layout_width="35dp"-->
-<!--            android:layout_height="16dp"-->
-<!--            android:layout_below="@id/velocity"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="N/A"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#090808"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.918"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.583" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/battery"-->
-<!--            android:layout_width="38dp"-->
-<!--            android:layout_height="18dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="N/A"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#020202"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--            app:layout_constraintHorizontal_bias="0.085"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imageView6" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/tankCapacity"-->
-<!--            android:layout_width="32dp"-->
-<!--            android:layout_height="16dp"-->
-<!--            android:layout_below="@id/battery"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="N/A"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#070707"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--            app:layout_constraintHorizontal_bias="0.222"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imageView6" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/sat"-->
-<!--            android:layout_width="29dp"-->
-<!--            android:layout_height="19dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="N/A"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#0B0A0A"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--            app:layout_constraintHorizontal_bias="0.763"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imageView6"-->
-<!--            app:layout_constraintVertical_bias="0.44" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/transmitterSignal"-->
-<!--            android:layout_width="34dp"-->
-<!--            android:layout_height="19dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="N/A"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#090707"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--            app:layout_constraintHorizontal_bias="0.925"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imageView6"-->
-<!--            app:layout_constraintVertical_bias="0.44" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView8"-->
-<!--            android:layout_width="14dp"-->
-<!--            android:layout_height="21dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="P:"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#020202"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.046"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.684" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/timer"-->
-<!--            android:layout_width="32dp"-->
-<!--            android:layout_height="16dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="N/A"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#070707"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--            app:layout_constraintHorizontal_bias="0.369"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imageView6"-->
-<!--            app:layout_constraintVertical_bias="0.466" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView10"-->
-<!--            android:layout_width="29dp"-->
-<!--            android:layout_height="19dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="Roll:"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#000000"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.172"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.666" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView11"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="Alt :"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#040303"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.335"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.625" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView12"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="Vel:"-->
-<!--            android:textColor="#040303"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.659"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.625" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView13"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="Dist:"-->
-<!--            android:textColor="#050505"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.872"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.583" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/mode"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="MODE"-->
-<!--            android:textColor="#050505"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/start"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="DISARM"-->
-<!--            android:textColor="#000000"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imageView6" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView2"-->
-<!--            android:layout_width="17dp"-->
-<!--            android:layout_height="16dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="L"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#040303"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--            app:layout_constraintHorizontal_bias="0.257"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imageView6" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView3"-->
-<!--            android:layout_width="15dp"-->
-<!--            android:layout_height="18dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="V"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#050505"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--            app:layout_constraintHorizontal_bias="0.132"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imageView6" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView4"-->
-<!--            android:layout_width="24dp"-->
-<!--            android:layout_height="17dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="deg"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#090808"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.106"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.583" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView5"-->
-<!--            android:layout_width="22dp"-->
-<!--            android:layout_height="17dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="deg"-->
-<!--            android:textColor="#050505"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.258"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.608" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView7"-->
-<!--            android:layout_width="25dp"-->
-<!--            android:layout_height="14dp"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="m/s"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#050505"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.736"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.538" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView9"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="m"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#040303"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintHorizontal_bias="0.934"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintVertical_bias="0.583" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/yaw"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:elevation="10dp"-->
-<!--            android:text="Yaw:"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#000000"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/imageView6"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/imageView6"-->
-<!--            app:layout_constraintHorizontal_bias="0.331"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/imageView6"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/imageView6"-->
-<!--            app:layout_constraintVertical_bias="0.466" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView19"-->
-<!--            android:layout_width="169dp"-->
-<!--            android:layout_height="78dp"-->
-<!--            android:background="@drawable/rectangle_shadow"-->
-<!--            android:textAlignment="center"-->
-<!--            android:visibility="invisible"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.243"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.168"-->
-<!--            tools:visibility="invisible" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/latitude"-->
-<!--            android:layout_width="141dp"-->
-<!--            android:layout_height="27dp"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#000000"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            android:visibility="invisible"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/textView19"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/textView19"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/textView19"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/textView19"-->
-<!--            app:layout_constraintVertical_bias="0.862"-->
-<!--            tools:visibility="invisible" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/longitude"-->
-<!--            android:layout_width="142dp"-->
-<!--            android:layout_height="28dp"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="#090808"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            android:visibility="invisible"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/textView19"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/textView19"-->
-<!--            app:layout_constraintHorizontal_bias="0.478"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/textView19"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/textView19"-->
-<!--            app:layout_constraintVertical_bias="0.177"-->
-<!--            tools:visibility="invisible" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/data"-->
-<!--            android:layout_width="165dp"-->
-<!--            android:layout_height="93dp"-->
-<!--            android:background="@drawable/rectangle_shadow"-->
-<!--            android:textAlignment="viewStart"-->
-<!--            android:textColor="#050505"-->
-<!--            android:textSize="14sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.971"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.804" />-->
-
-<!--        <View-->
-<!--            android:id="@+id/circle"-->
-<!--            android:layout_width="54dp"-->
-<!--            android:layout_height="54dp"-->
-<!--            android:background="@drawable/circle"-->
-<!--            android:visibility="invisible"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/circleanmi"-->
-<!--            app:layout_constraintHorizontal_bias="1.0"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/circleanmi"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/circleanmi" />-->
-
-<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--            android:id="@+id/circleanmi"-->
-<!--            android:layout_width="57dp"-->
-<!--            android:layout_height="54dp"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:src="@drawable/baseline_build_circle_24"-->
-<!--            android:visibility="invisible"-->
-<!--            app:backgroundTint="@color/green"-->
-<!--            app:circularflow_defaultRadius="10dp"-->
-<!--            app:layout_constraintBottom_toTopOf="@+id/imgBottomBar"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.945"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:tint="@color/black"-->
-<!--            tools:visibility="invisible" />-->
-
-
-<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--</RelativeLayout>-->
-
-
