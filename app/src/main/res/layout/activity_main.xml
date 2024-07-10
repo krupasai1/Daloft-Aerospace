@@ -7,7 +7,7 @@
     android:background="@color/grey">
 
     <!-- Include activity_maps.xml as the background -->
-
+    <include layout="@layout/activity_maps"/>
 
     <!-- Your existing layout content -->
     <androidx.constraintlayout.widget.ConstraintLayout
