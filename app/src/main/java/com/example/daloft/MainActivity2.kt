@@ -40,12 +40,12 @@ class MainActivity2 : AppCompatActivity() {
             }
         }
 
-        toggleButtonTintOnClick(binding.bList as ImageButton, "#90657369", "#983873ed")
+        toggleButtonTintOnClick(binding.bList as ImageButton, "#902484E4", "#983873ed")
         toggleButtonTintOnClick(binding.bConnect as ImageButton, "#90F44336", "#983873ed")
-        toggleButtonTintOnClick(binding.startButton as ImageButton, "#90657369", "#983873ed")
-        toggleButtonTintOnClick(binding.startWp as ImageButton, "#9863509e", "#983873ed")
-        toggleButtonTintOnClick(binding.missionStart as ImageButton, "#98a64d4b", "#983873ed")
-        toggleButtonTintOnClick(binding.autopilot as ImageButton, "#9863509e", "#983873ed")
+        toggleButtonTintOnClick(binding.startButton as ImageButton, "#9012E40B", "#983873ed")
+        toggleButtonTintOnClick(binding.startWp as ImageButton, "#6CF03B", "#983873ed")
+        toggleButtonTintOnClick(binding.missionStart as ImageButton, "#90F84436", "#983873ed")
+        toggleButtonTintOnClick(binding.autopilot as ImageButton, "#31C8AB", "#983873ed")
     }
 }
 
@@ -63,6 +63,5 @@ fun toggleButtonTintOnClick(imageButton: ImageButton, color1: String, color2: St
         isDefaultColor = !isDefaultColor
     }
 }
-
 
 

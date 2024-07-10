@@ -47,7 +47,7 @@
                     android:background="@drawable/roundbuttonbk"
                     android:src="@drawable/power"
                     android:scaleType="centerInside"
-                    android:backgroundTint="#9963509e"
+                    android:backgroundTint="#6CF03B"
                     android:text="Start"
                     android:textColor="@color/white"
 
@@ -73,7 +73,7 @@
                     android:background="@drawable/roundbuttonbk"
                     android:src="@drawable/ms"
                     android:scaleType="centerInside"
-                    android:backgroundTint="#90a64d4b"
+                    android:backgroundTint="#90F84436"
                     android:text="MS"
                     android:textColor="@color/white"
                     app:cornerRadius="10dp"
@@ -101,7 +101,7 @@
                     android:background="@drawable/roundbuttonbk"
                     android:src="@drawable/autopilot"
                     android:scaleType="centerInside"
-                    android:backgroundTint="#9863509e"
+                    android:backgroundTint="#31C8AB"
                     android:text="AutoPilot"
                     android:textColor="@color/white"
                     app:cornerRadius="10dp"
@@ -290,7 +290,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:clickable="true"
-
             android:src="@drawable/menu_off"
             app:layout_constraintBottom_toTopOf="@+id/imgBottomBar"
             app:layout_constraintStart_toStartOf="parent"
@@ -321,8 +320,7 @@
                 android:background="@drawable/roundbuttonbk"
                 android:src="@drawable/bluetooth"
                 android:scaleType="centerInside"
-
-                android:backgroundTint="#90657369"
+                android:backgroundTint="#902484E4"
                 android:text="BT Devices"
                 android:textColor="@color/white"
                 android:textColorLink="#673AB7"
@@ -331,6 +329,31 @@
                 app:layout_constraintHorizontal_bias="0.955"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="275dp" />
+
+            <!--<soup.neumorphism.NeumorphImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:padding="23dp"
+                android:src="@drawable/bluetooth"
+                android:scaleType="centerInside"
+                app:neumorph_backgroundColor="#90657369"
+                app:neumorph_shapeType="flat"
+                app:neumorph_shadowElevation="4dp"
+                app:neumorph_shadowColorLight="#FFFFFF"
+
+                />-->
+
+            <!--<soup.neumorphism.NeumorphCardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:neumorph_shadowElevation="4dp"
+
+
+
+
+
+                />-->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -379,7 +402,7 @@
                 android:background="@drawable/roundbuttonbk"
                 android:src="@drawable/magos"
                 android:scaleType="centerInside"
-                android:backgroundTint="#90657369"
+                android:backgroundTint="#9012E40B"
                 android:text="Mag OS"
                 android:textColor="@color/white"
                 app:cornerRadius="10dp"
