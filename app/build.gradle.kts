@@ -74,6 +74,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
+    implementation("androidx.core:core-ktx:1.6.0")
+    implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.github.abdulrehmank7:trapezium-view:1.0")
     implementation("androidx.cardview:cardview:1.0.0")
     debugImplementation(libs.androidx.ui.tooling)
