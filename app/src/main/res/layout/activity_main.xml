@@ -7,6 +7,9 @@
     android:background="@drawable/maps"
     tools:context=".MainActivity">
 
+    <!-- Include activity_maps.xml as the background -->
+    <include layout="@layout/activity_maps"/>
+
 
     <FrameLayout
         android:layout_width="50dp"
